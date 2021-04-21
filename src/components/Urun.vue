@@ -1,5 +1,5 @@
 <template>
-<div class="wrapper">
+<div class="container">
     <div class="sidebar">
         <div class="bg_shadow"></div>
         <div class="sidebar__inner">
@@ -17,24 +17,24 @@
         
         <ul class="siderbar_menu">
             <li><router-link to="/">
-                <div class="icon"><i class="fa fa-home" aria-hidden="true"></i></div>
-                <div class="title">Anasayfa</div>
+                <div class="icon"><i class="fa fa-home" aria-hidden="true">Anasayfa</i></div>
+                
                 </router-link></li>  
             <li><router-link to="/stok">
-                <div class="icon"><i class="fa fa-codepen" aria-hidden="true"></i></div>
-                <div class="title">Stok</div>
+                <div class="icon"><i class="fa fa-cubes" aria-hidden="true">Stok</i></div>
+                
                 </router-link></li>  
             <li><router-link to="/depo">
-                <div class="icon"><i class="fa fa-university" aria-hidden="true"></i></div>
-                <div class="title">Depo</div>
+                <div class="icon"><i class="fa fa-archive" aria-hidden="true">Depo</i></div>
+                
                 </router-link></li>  
             <li><router-link to="/kategori">
-                <div class="icon"><i class="fa fa-list" aria-hidden="true"></i></div>
-                <div class="title">Kategori</div>
+                <div class="icon"><i class="fa fa-list" aria-hidden="true">Kategori</i></div>
+                
                 </router-link></li>  
             <li><router-link to="urun">
-                <div class="icon"><i class="fa fa-shopping-bag" aria-hidden="true"></i></div>
-                <div class="title">Ürün</div>
+                <div class="icon"><i class="fa fa-shopping-bag" aria-hidden="true">Ürün</i></div>
+                
                 </router-link></li>  
         </ul>
         
@@ -43,15 +43,15 @@
         
     <div class="row">
 <div class="col-md-3">
-    <h6>KategoriAdi</h6>
+    <h6>KategoriAdı</h6>
     <input id = "urunstyle2" type="text" class="form-control" placeholder="Kategori Adi" aria-label="Kategori Adi">
     </div>
     <div class="col-md-3"> 
-        <h6>Aciklama</h6>
+        <h6>Açıklama</h6>
     <input id = "urunstyle3" type="text" class="form-control" placeholder="Aciklama" aria-label="Aciklama">
     </div>
     <div class="col-md-3">
-        <h6>SatirSayisi</h6>
+        <h6>SatırSayısı</h6>
     <input id = "urunstyle4" type="text" class="form-control" placeholder="20" aria-label="20">
     </div>
     <div class="col-md-3">
@@ -59,8 +59,9 @@
     <input id = "urunstyle5" type="text" class="form-control" placeholder="Hepsi" aria-label="Hepsi">
     </div>
 </div>
-    <i class="fa fa-refresh" aria-hidden="true" id ="iconstyle"></i>
-    <p class = "urun-bilgi">Urun Bilgileri</p>
+<p></p>
+    <i class="fa fa-refresh" aria-hidden="true" id ="iconstyle1">Ara</i>
+    <p class = "urun-bilgi">Ürün Bilgileri</p>
     <table class = "depo">
         <thead>
             <tr>
@@ -111,7 +112,7 @@ export default{
 }
 </script>
 <style>
-.wrapper .sidebar__inner {
+.container .sidebar__inner {
     width: 225px;
     position: fixed;
     top: 0;
@@ -121,20 +122,20 @@ export default{
     z-index: 999;
     transition: all 0.3s ease;
 }
-.wrapper .sidebar__inner .profile_info {
+.container    .sidebar__inner .profile_info {
     padding: 30px 50px;
     text-align: center;
 }
-.wrapper .sidebar__inner .profile_info .profile_img {
+.container    .sidebar__inner .profile_info .profile_img {
     width: 125px;
     margin: 0 auto 15px;
 }
-.wrapper .sidebar__inner .profile_info .profile_data .name {
+.container   .sidebar__inner .profile_info .profile_data .name {
     font-size: 22px;
     font-weight: 700;
     color: #fff;
 }
-.wrapper .sidebar__inner .siderbar_menu li a {
+.container    .sidebar__inner .siderbar_menu li a {
     padding: 10px 50px;
     display: block;
     height: 90px;
@@ -144,8 +145,8 @@ export default{
     text-align: center;
     text-transform: uppercase;
 }
-.wrapper .sidebar__inner .siderbar_menu li a:hover,
-.wrapper .sidebar__inner .siderbar_menu li a.active {
+.container   .sidebar__inner .siderbar_menu li a:hover,
+.container    .sidebar__inner .siderbar_menu li a.active {
     background:  #c23616;
     color: white;
 }
@@ -183,14 +184,23 @@ tbody tr:hover {
 .urun-bilgi{
     margin-left: -160px;
 }
-#iconstyle{
+#iconstyle1{
     margin-left: -160px;
     background-color: #20bf6b;
     color: white;
-    width: 50px;
-    height: 30px;
-    padding: 20px;
+    width: 65px;
+    height: 45px;
+    padding: 16px;
     
+    border-radius: 12%;
+    
+    
+}
+.row{
+    margin: -175px;
+    padding: -20px;
+    margin-bottom: auto;
+    margin-top: auto;
 }
 
 

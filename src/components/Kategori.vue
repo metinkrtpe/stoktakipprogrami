@@ -16,38 +16,37 @@
         </div>
         <ul class="siderbar_menu">
             <li><router-link to="/">
-                <div class="icon"><i class="fa fa-home" aria-hidden="true"></i></div>
-                <div class="title">Anasayfa</div>
+                <div class="icon"><i class="fa fa-home" aria-hidden="true">Anasayfa</i></div>
+                
                 </router-link></li>  
                 
             <li><router-link to="/stok">
-                <div class="icon"><i class="fa fa-codepen" aria-hidden="true"></i></div>
-                <div class="title">Stok</div>
+                <div class="icon"><i class="fa fa-cubes" aria-hidden="true">Stok</i></div>
+                
                 </router-link></li>  
             <li><router-link to="/depo">
-                <div class="icon"><i class="fa fa-university" aria-hidden="true"></i></div>
-                <div class="title">Depo</div>
+                <div class="icon"><i class="fa fa-archive" aria-hidden="true">Depo</i></div>
+
                 </router-link></li>  
             <li><router-link to="/kategori">
-                <div class="icon"><i class="fa fa-list" aria-hidden="true"></i></div>
-                <div class="title">Kategori</div>
+                <div class="icon"><i class="fa fa-list" aria-hidden="true">Kategori</i></div>
+                
                 </router-link></li>  
             <li><router-link to="urun">
-                <div class="icon"><i class="fa fa-shopping-bag" aria-hidden="true"></i></div>
-                <div class="title">Ürün</div>
+                <div class="icon"><i class="fa fa-shopping-bag" aria-hidden="true">Ürün</i></div>
+                
                 </router-link></li>  
         </ul>
-        
         </div>
     </div> 
     <i class="fa fa-refresh" aria-hidden="true" id ="iconstyle"></i>
+    <p></p>
     <table class = "depo">
         <thead>
             <tr>
-                <th>Kategori Adi</th>
-                <th>Aciklama</th>
+                <th>Kategori Adı</th>
+                <th>Açıklama</th>
                 <th>Depo</th>
-                
             </tr>
         </thead>
         <tbody>
@@ -165,9 +164,10 @@ tbody tr:hover {
     margin-left: -160px;
     background-color: #20bf6b;
     color: white;
-    width: 50px;
-    height: 30px;
+    width: 45;
+    height: 50px;
     padding: 20px;
-    
+    border-radius: 12%;
 }
+
 </style>

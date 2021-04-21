@@ -1,5 +1,8 @@
 <template>
+
 <div class="wrapper">
+    <h3 v-if="user">{{user.first_name}} {{user.last_name}}</h3>
+    <h3 v-if="!user"></h3>
     <div class="sidebar">
         <div class="bg_shadow"></div>
         <div class="sidebar__inner">
@@ -16,77 +19,85 @@
         </div>
         <ul class="siderbar_menu">
             <li><router-link to="/">
-                <div class="icon"><i class="fa fa-home" aria-hidden="true"></i></div>
-                <div class="title">Anasayfa</div>
+                <div class="icon"><i class="fa fa-home" aria-hidden="true">Anasayfa</i></div>
+                
                 </router-link></li>  
                 
             <li><router-link to="/stok">
-                <div class="icon"><i class="fa fa-codepen" aria-hidden="true"></i></div>
-                <div class="title">Stok</div>
+                <div class="icon"><i class="fa fa-cubes" aria-hidden="true">Stok</i></div>
+                
                 </router-link></li>  
             <li><router-link to="/depo">
-                <div class="icon"><i class="fa fa-university" aria-hidden="true"></i></div>
-                <div class="title">Depo</div>
+                <div class="icon"><i class="fa fa-archive" aria-hidden="true">Depo</i></div>
+                
                 </router-link></li>  
             <li><router-link to="/kategori">
-                <div class="icon"><i class="fa fa-list" aria-hidden="true"></i></div>
-                <div class="title">Kategori</div>
+                <div class="icon"><i class="fa fa-list" aria-hidden="true">Kategori</i></div>
+                
                 </router-link></li>  
             <li><router-link to="urun">
-                <div class="icon"><i class="fa fa-shopping-bag" aria-hidden="true"></i></div>
-                <div class="title">Ürün</div>
+                <div class="icon"><i class="fa fa-shopping-bag" aria-hidden="true">Ürün</i></div>
+                
                 </router-link></li>  
         </ul>
         </div>
     </div> 
-	
-    <div class="main-section">
-		<div class="dashbord">
-			<div class="icon-section">
-				<i class="fa fa-users" aria-hidden="true"></i><br>
-				<small>Kullanicilar</small>
-				<p>5</p>
-			</div>
-			<div class="detail-section">
-				<a href="#">Goster</a>
-			</div>
-		</div>
-		<div class="dashbord dashbord-green">
-			<div class="icon-section">
-            <i class="fa fa-university" aria-hidden="true"></i><br>
-				<small>Depolar</small>
-				<p>5</p>
-			</div>
-			<div class="detail-section">
-				<router-link to="/depo">Goster</router-link>
-			</div>
-		</div>
-		<div class="dashbord dashbord-orange">
-			<div class="icon-section">
-            <i class="fa fa-envelope" aria-hidden="true"></i><br>
-				<small>Kategoriler</small>
-				<p>5</p>
-			</div>
-			<div class="detail-section">
-				<router-link to="/kategori">Goster</router-link>
-			</div>
-		</div>
-		<div class="dashbord dashbord-blue">
-			<div class="icon-section">
-            <i class="fa fa-bars" aria-hidden="true"></i><br>
-				<small>Urunler</small>
-				<p>10</p>
-			</div>
-			<div class="detail-section">
-				<router-link to = "/urun">Goster</router-link>
-			</div>
-			</div>
-		</div>
+    <main>
+            <div class = "cards">
+                <div class = "card-single">
+                    <div>
+                        <h1>5</h1>
+                        <router-link to="/" class = "routerstyle">KULLANICILAR</router-link>
+                    </div>
+                    <div>
+                        <span class = "fa fa-users" aria-hidden="true"></span>
+                    </div>
+                    
+                </div>
+                <div class = "card-single2">
+                    <div>
+                        <h1>5</h1>
+                        <router-link to="/depo" class = "routerstyle">DEPOLAR</router-link>
+                        
+                    </div>
+                
+                    <div>
+                        <span class = "fa fa-archive" aria-hidden = "true"></span>
+                    </div>
+                </div>
+                <div class = "card-single3">
+                    <div>
+                        <h1>5</h1>
+                        <router-link to="/kategori" class="routerstyle">KATEGORİLER</router-link>
+                    </div>
+                    <div>
+                        <span class = "fa fa-envelope-open-o"></span>
+                    </div>
+                </div>
+                <div class = "card-single4">
+                    <div>
+                        <h1>10</h1>
+                        <router-link to ="/urun" class ="routerstyle">ÜRÜNLER</router-link>
+                    </div>
+                    
+                    <div>
+                        <span class = "fa fa-bars"></span>
+                    </div>
+                </div>
+                
+
+            </div>
+        </main>
 	</div>
 
 </template>
 <script>
+export default{
+    name: 'Home',
+    props: ['user']
+}
     
+
 </script>
 <style>
 .wrapper .sidebar__inner {
@@ -130,76 +141,97 @@
     background:  #c23616;
     color: white;
 }
-.main-section{
-	width:105%;
-	margin:0 auto;
-	text-align: center;
-	padding: 0px 5px;
-}
-.dashbord{
-	width:50%;
-	display: inline-block;
-	background-color: #e84118;
-	color: white;
-	margin-top: 50px;
-    text-align: center;
-    margin-left: -10px;
-	
-}
-.icon-section i{
-	font-size: 30px;
-	padding:10px;
-	border:1px solid #fff;
-	border-radius:50%;
-	margin-top:-25px;
-	margin-bottom: 10px;
-	background-color:#e84118;
-}
-.icon-section p{
-	margin:0px;
-	font-size: 20px;
-	padding-bottom: 10px;
-}
-.detail-section{
-	background-color: #c23616;
-	padding: 5px 0px;
-}
-.dashbord .detail-section:hover{
-	background-color: #5a5a5a;
-	cursor: pointer;
-}
-.detail-section a{
-	color:#fff;
-	text-decoration: none;
-}
-.dashbord-green .icon-section,.dashbord-green .icon-section i{
-	background-color: #26de81;
-}
-.dashbord-green .detail-section{
-	background-color: #20bf6b;
-}
-.dashbord-orange .icon-section,.dashbord-orange .icon-section i{
-	background-color: #0097e6;
-}
-.dashbord-orange .detail-section{
-	background-color: #00a8ff;
-}
-.dashbord-blue .icon-section,.dashbord-blue .icon-section i{
-	background-color: #fbc531;
-}
-.dashbord-blue .detail-section{
+
+
+
+
+
+.card-single4 .detail-section{
 	background-color: #e1b12c;
 }
-.dashbord-red .icon-section,.dashbord-red .icon-section i{
-	background-color:#E74C3C;
-}
-.dashbord-red .detail-section{
-	background-color:#CF4436;
-}
-.dashbord-skyblue .icon-section,.dashbord-skyblue .icon-section i{
-	background-color:#8E44AD;
-}
-.dashbord-skyblue .detail-section{
-	background-color:#803D9B;
-}
+main {
+            margin-top: 85px;
+            padding: 2rem 1.5rem;
+            min-height: calc(100vh - 90px);
+        }
+        .cards{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 2rem;
+            margin-top: 1rem;
+            margin-left: -130px;
+        }
+        .card-single{
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
+            padding: 2rem;
+            border-radius: 2px;
+            background: #e74c3c;
+            width: 210px;
+            margin-left: -70px;
+        }
+        .card-single2{
+            display: flex;
+            justify-content: space-between;
+            background: #1dd1a1;
+            padding: 2rem;
+            border-radius: 2px;
+            color: #fff;
+            width: 210px;
+            
+        }
+        .card-single3{
+            display: flex;
+            justify-content: space-between;
+            background: #0abde3;
+            padding: 2rem;
+            border-radius: 2px;
+            color: #fff;
+            width: 210px;
+        }
+        .card-single4{
+            display: flex;
+            justify-content: space-between;
+            background: #ffbe76;
+            padding: 2rem;
+            border-radius: 2px;
+            color: #fff;
+            width: 210px;
+        }
+        .card-single div:last-child span{
+            font-size: 3rem;
+            
+            
+        }
+        .card-single2 div:last-child span{
+            font-size: 3rem;
+            
+            
+        }
+        .card-single3 div:last-child span{
+            font-size: 3rem;
+            
+            
+        }
+        .card-single4 div:last-child span{
+            font-size: 3rem;
+            
+            
+        }
+        .card-single div:first-child span {
+            color: var(--text-grey);
+            
+        }
+        .routerstyle{
+            color: #fff;
+            font-size: 1.2rem;
+        }
+        .routerstyle:hover{
+            color: black;
+            text-decoration: none;
+        } 
+        
+
+
 </style>

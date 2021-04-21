@@ -1,11 +1,11 @@
 <template>
     <form @submit.prevent = "handleSubmit">
         <error v-if = "error" :error="error" />
-    <h3>Kayit Ol</h3>
+    <h3>Kayıt Ol</h3>
 
     <div class = "form-group">
-        <label>Isim</label>
-        <input type = "text" class = "form-control" v-model = "first_name" placeholder="Isim"/>
+        <label>İsim</label>
+        <input type = "text" class = "form-control" v-model = "first_name" placeholder="İsim"/>
     </div>
     <div class = "form-group">
         <label>Soy isim</label>
@@ -22,10 +22,10 @@
     </div>
     
     <div class = "form-group">
-        <label>Parolayi Tekrar Giriniz</label>
-        <input type = "password" class = "form-control" v-model = "password_confirm" placeholder = "Parolayi tekrar giriniz"/>
+        <label>Parolayı Tekrar Giriniz</label>
+        <input type = "password" class = "form-control" v-model = "password_confirm" placeholder = "Parolayı tekrar giriniz"/>
     </div>
-    <button class = "btn btn-primary btn-clock">Kayit Ol</button>
+    <button class = "btn btn-primary btn-clock">Kayıt Ol</button>
     </form>
 </template>
 <script>

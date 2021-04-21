@@ -43,7 +43,6 @@ async created(){
     display: flex;
     font-weight: 400;
     font-family: 'Fira Sans', sans-serif;
-    
   }
   h1,h2, h3, h4, h5, h6, label, span {
     font-weight: 500;

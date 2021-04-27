@@ -27,6 +27,7 @@ export default new Router({
         {path: '/kategori', component: Kategori},
         {path: '/urun', component: Urun},
         {path: '/stok', component: Stok}
+        
 
     
         

@@ -1,12 +1,11 @@
 <template>
-<div class = "alert alert-danger" role = "alert">
-            {{error}}
-        </div>
+  <div class="alert alert-danger" role="alert">
+    {{ error }}
+  </div>
 </template>
 <script>
-    export default {
-        name: 'Error',
-        props: ['error']
-    }
-
+export default {
+  name: "Error",
+  props: ["error"],
+};
 </script>

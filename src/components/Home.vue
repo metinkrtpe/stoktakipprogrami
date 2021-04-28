@@ -1,5 +1,6 @@
 <template>
   <div>
+    <sidebar />
     <main>
       <div class="cards">
         <div class="card-single">
@@ -46,8 +47,13 @@
   </div>
 </template>
 <script>
+import sidebar from "./sidebar.vue";
+
 export default {
   name: "Home",
+  components: {
+    sidebar,
+  },
   props: ["user"],
 };
 </script>

@@ -31,6 +31,8 @@
 <script>
 //import axios from 'axios'
 import Error from "./Error.vue";
+console.log(localStorage.getItem("token"));
+
 export default {
   name: "Login",
   components: {
@@ -45,11 +47,15 @@ export default {
   },
   methods: {
     async handleSubmit() {
+      localStorage.setItem("token", "randomdasklşdaklşdklasdkladklşakldalkds");
       this.$router.push("/");
-    localStorage.setItem("token", "randomdasklşdaklşdklasdkladklşakldalkds");
       this.$store.dispatch("user", []);
-
     },
+  },
+  mounted() {
+    if (localStorage.getItem("token")) {
+      this.$router.push("/login");
+    }
   },
 };
 </script>

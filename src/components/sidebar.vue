@@ -24,13 +24,6 @@
             </router-link>
           </li>
           <li>
-            <router-link to="/stok">
-              <div class="icon">
-                <i class="fa fa-cubes" aria-hidden="true">Stok</i>
-              </div>
-            </router-link>
-          </li>
-          <li>
             <router-link to="/depo">
               <div class="icon">
                 <i class="fa fa-archive" aria-hidden="true">Depo</i>

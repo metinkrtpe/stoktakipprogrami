@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <sidebar />
     <Nav />
     <div class="auth-wrapper">
       <div class="auth-inner">
@@ -11,49 +10,13 @@
 </template>
 
 <script>
-import Nav from "./components/Nav.vue";
 import axios from "axios";
-import Sidebar from "./components/sidebar.vue";
+import Nav from "./components/Nav.vue";
 
 export default {
   name: "App",
   components: {
     Nav,
-    Sidebar,
-  },
-  data() {
-    return {
-      products: [
-        {
-          id: 1,
-          kategoriId: 1,
-          ÜrünAdı: "Anakart",
-          Aciklama: "",
-          Depo: "Istanbul",
-        },
-        {
-          id: 2,
-          kategoriId: 1,
-          ÜrünAdı: "Anakart",
-          Aciklama: "",
-          Depo: "Istanbul",
-        },
-        {
-          id: 3,
-          kategoriId: 2,
-          ÜrünAdı: "Anakart",
-          Aciklama: "",
-          Depo: "Istanbul",
-        },
-        {
-          id: 4,
-          kategoriId: 5,
-          ÜrünAdı: "Anakart",
-          Aciklama: "",
-          Depo: "Istanbul",
-        },
-      ],
-    };
   },
 
   async created() {
@@ -96,7 +59,6 @@ html,
   height: 100%;
 }
 #app {
-  text-align: center;
 }
 .navbar-light {
   background-color: #ffffff;

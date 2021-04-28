@@ -8,7 +8,7 @@ import Reset from './components/Reset.vue'
 import Depo from './components/Depo.vue'
 import Kategori from './components/Kategori.vue'
 import Urun from './components/Urun.vue'
-import Stok from './components/Stok.vue'
+
 
 
 
@@ -25,8 +25,8 @@ export default new Router({
         {path: '/reset/:token', component: Reset},
         {path: '/depo', component: Depo},
         {path: '/kategori', component: Kategori},
-        {path: '/urun', component: Urun},
-        {path: '/stok', component: Stok}
+        {path: '/urun', component: Urun}
+    
         
 
     

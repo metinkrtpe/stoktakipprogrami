@@ -51,16 +51,17 @@
     </div>
     <UrunEkleme @add:product="addProduct" />
 
-    <h6>Urun Bılgılerı</h6>
+    <h6>Ürün Bilgileri</h6>
     <table class="table table-striped table-hover">
       <thead class="thead-dark">
         <tr>
-          <th>id</th>
+          <th>ID</th>
           <th>Kategori</th>
-          <th>UrunAdi</th>
-          <th>Aciklama</th>
+          <th>Ürün Adı</th>
+          <th>Açıklama</th>
           <th>Depo</th>
           <th>Düzenleme</th>
+          <th>Silme</th>
         </tr>
       </thead>
       <tbody>
@@ -120,29 +121,22 @@
           <td v-else>
             {{ product.Depo }}
           </td>
-
-          <td>{{ product.id }}</td>
-          <td>{{ product.Kategori }}</td>
-          <td>{{ product.ÜrünAdı }}</td>
-          <td>{{ product.Aciklama }}</td>
-          <td>{{ product.Depo }}</td>
           <td v-if="updateId !== product.id">
             <button class="btn btn-warning" @click="handleUpdate(product)">
-              Guncelle
-            </button>
-            <button
-              class="btn btn-sm btn-danger"
-              @click="deleteProduct(product)"
-            >
-              Sil
+              Güncelle
             </button>
           </td>
           <td v-else>
-            <button class="btn btn-success" @click="handleSave(product)">
+            <button class="btn btn-sm btn-success" @click="handleSave(product)">
               Kaydet
             </button>
             <button class="btn btn-sm btn-danger" @click="updateId = null">
               Iptal Et
+            </button>
+          </td>
+          <td>
+            <button class="btn btn-danger" @click="deleteProduct(product)">
+              Sil
             </button>
           </td>
         </tr>

@@ -3,7 +3,7 @@
     <form @submit.prevent="handleAdd">
       <div class="row">
         <div class="col-md-2">
-          <label for="id">Id</label>
+          <label for="id">ID</label>
           <input
             v-model="product.id"
             type="text"
@@ -34,7 +34,7 @@
           />
         </div>
         <div class="col-md-2">
-          <label for="Aciklama">Acıklama</label>
+          <label for="Aciklama">Açıklama</label>
           <input
             v-model="product.Aciklama"
             type="text"

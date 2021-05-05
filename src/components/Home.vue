@@ -37,7 +37,6 @@
             <h1>10</h1>
             <router-link to="/urun" class="routerstyle">ÜRÜNLER</router-link>
           </div>
-
           <div>
             <span class="fa fa-bars"></span>
           </div>
@@ -55,6 +54,11 @@ export default {
     sidebar,
   },
   props: ["user"],
+  mounted() {
+    if (!localStorage.getItem("token")) {
+      this.$router.push("/login");
+    }
+  },
 };
 </script>
 <style>

@@ -151,6 +151,11 @@ export default {
     },
     updateProduct() {},
   },
+  mounted() {
+    if (!localStorage.getItem("token")) {
+      this.$router.push("/login");
+    }
+  },
 };
 </script>
 <style>

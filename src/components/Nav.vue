@@ -4,11 +4,10 @@
       <router-link to="/" class="navbar-brand"
         >Anasayfa
         <div>{{ $route.name }}</div>
-
         {{ currentRouteName }}
       </router-link>
       <div class="collapse navbar-collapse">
-        <ul class="navbar-nav ml-auto" v-if="!user">
+        <ul class="navbar-nav ml-auto" v-if="!isLoggedIn()">
           <li class="nav-item">
             <router-link to="/login" class="nav-link">Giris Yap</router-link>
           </li>
@@ -16,7 +15,7 @@
             <router-link to="/register" class="nav-link">Kayit Ol</router-link>
           </li>
         </ul>
-        <ul class="navbar-nav ml-auto" v-if="user">
+        <ul class="navbar-nav ml-auto" v-if="isLoggedIn()">
           <li class="nav-item">
             <a href="javascript:void(0)" @click="handleClick" class="nav-link"
               >Çıkış Yap</a
@@ -37,6 +36,9 @@ export default {
       localStorage.removeItem("token");
       this.$store.dispatch("user", null);
       this.$router.push("/login");
+    },
+    isLoggedIn() {
+      return localStorage.getItem("token") ? true : false;
     },
   },
   computed: {

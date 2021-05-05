@@ -2,7 +2,6 @@
   <form @submit.prevent="handleSubmit">
     <error v-if="error" :error="error" />
     <h3>Giris Yap</h3>
-
     <div class="form-group">
       <label>Email</label>
       <input
@@ -46,15 +45,15 @@ export default {
     };
   },
   methods: {
-    async handleSubmit() {
-      localStorage.setItem("token", "randomdasklşdaklşdklasdkladklşakldalkds");
+    handleSubmit() {
+      localStorage.setItem("token", "deger");
       this.$router.push("/");
       this.$store.dispatch("user", []);
     },
   },
   mounted() {
     if (localStorage.getItem("token")) {
-      this.$router.push("/login");
+      this.$router.push("/");
     }
   },
 };

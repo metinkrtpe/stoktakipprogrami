@@ -4,6 +4,7 @@ import router from './router'
 import './axios'
 import store from './vuex'
 
+
 Vue.config.productionTip = false
 
 new Vue({

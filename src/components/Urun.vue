@@ -206,11 +206,16 @@ export default {
       this.products = [...this.products, newProduct];
     },
   },
+  mounted() {
+    if (!localStorage.getItem("token")) {
+      this.$router.push("/login");
+    }
+  },
 };
 </script>
 <style scoped>
 .table {
-  margin-left: -160px;
+  margin-left: -115px;
 }
 .wrapper .sidebar__inner {
   width: 225px;

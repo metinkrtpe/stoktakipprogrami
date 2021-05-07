@@ -1,15 +1,13 @@
 <template>
   <div>
-    <sidebar />
     <h6>Kategori Bilgileri</h6>
     <table class="table table-striped table-hover">
       <thead class="thead-dark">
         <tr>
           <th>ID</th>
-          <th>Kategori</th>
-          <th>Ürün Adı</th>
+          <th>Kategori Adi</th>
           <th>Açıklama</th>
-          <th>Depo</th>
+          <th>Depo Adı</th>
           <th>Düzenleme</th>
           <th>Silme</th>
         </tr>
@@ -40,17 +38,6 @@
           </td>
           <td v-if="updateId === product.id">
             <input
-              v-model="product.ÜrünAdı"
-              type="text"
-              class="form-control"
-              id="ürünAdı"
-            />
-          </td>
-          <td v-else>
-            {{ product.ÜrünAdı }}
-          </td>
-          <td v-if="updateId === product.id">
-            <input
               v-model="product.Aciklama"
               type="text"
               class="form-control"
@@ -62,14 +49,14 @@
           </td>
           <td v-if="updateId === product.id">
             <input
-              v-model="product.Depo"
+              v-model="product.DepoAdi"
               type="text"
               class="form-control"
-              id="depo"
+              id="depoAdi"
             />
           </td>
           <td v-else>
-            {{ product.Depo }}
+            {{ product.DepoAdi }}
           </td>
           <td v-if="updateId !== product.id">
             <button class="btn btn-warning" @click="handleUpdate(product)">
@@ -95,42 +82,34 @@
   </div>
 </template>
 <script>
-import sidebar from "./sidebar.vue";
 export default {
   name: "kategori",
-  components: {
-    sidebar,
-  },
   data() {
     return {
       products: [
         {
           id: 1,
           Kategori: "Bilgisayar",
-          ÜrünAdı: "Lenova",
           Aciklama: "Frontend",
-          Depo: "Istanbul",
+          DepoAdi: "Hatay",
         },
         {
           id: 2,
           Kategori: "Donanim",
-          ÜrünAdı: "Klavye",
           Aciklama: "Backend",
-          Depo: "Istanbul",
+          DepoAdi: "Ankara",
         },
         {
           id: 3,
           Kategori: "Bilgisayar",
-          ÜrünAdı: "Macbook pro",
           Aciklama: "İnsan Kaynakları",
-          Depo: "Istanbul",
+          DepoAdi: "Istanbul",
         },
         {
           id: 4,
           Kategori: "Donanim",
-          ÜrünAdı: "Anakart",
           Aciklama: "Test",
-          Depo: "Istanbul",
+          DepoAdi: "Antalya",
         },
       ],
       updateId: null,
@@ -158,9 +137,4 @@ export default {
   },
 };
 </script>
-<style>
-.table {
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
+<style></style>

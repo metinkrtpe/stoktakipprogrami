@@ -12,7 +12,6 @@
             placeholder="ID"
           />
         </div>
-
         <div class="col-md-2">
           <label for="Kategori">Kategori</label>
           <input
@@ -77,18 +76,18 @@ export default {
 </script>
 <style scoped>
 #addForm {
-  margin: 100px;
+  margin: auto;
 }
 .row {
-  margin: -250px;
+  margin-left: auto;
+  margin-right: auto;
   padding: -20px;
   margin-bottom: auto;
   margin-top: auto;
 }
 #btnDuzenle {
-  margin-top: auto;
-  margin-bottom: 0px;
-  margin-left: auto;
-  margin-right: auto;
+  width: auto;
+  height: auto;
+  margin-top: 30px;
 }
 </style>

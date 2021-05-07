@@ -1,6 +1,5 @@
 <template>
   <div>
-    <sidebar />
     <main>
       <div class="cards">
         <div class="card-single">
@@ -46,13 +45,11 @@
   </div>
 </template>
 <script>
-import sidebar from "./sidebar.vue";
+
 
 export default {
   name: "Home",
-  components: {
-    sidebar,
-  },
+  
   props: ["user"],
   mounted() {
     if (!localStorage.getItem("token")) {
@@ -75,7 +72,8 @@ main {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 2rem;
   margin-top: 1rem;
-  margin-left: -130px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .card-single {
   display: flex;
@@ -132,6 +130,7 @@ main {
 .routerstyle {
   color: #fff;
   font-size: 1.2rem;
+  text-decoration: none;
 }
 .routerstyle:hover {
   color: black;

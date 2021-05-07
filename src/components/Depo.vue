@@ -1,15 +1,13 @@
 <template>
   <div>
-    <sidebar />
     <h6>Depo Bilgileri</h6>
     <table class="table table-striped table-hover">
       <thead class="thead-dark">
         <tr>
           <th>ID</th>
-          <th>Kategori</th>
-          <th>Ürün Adı</th>
-          <th>Açıklama</th>
-          <th>Depo</th>
+          <th>Depo Adı</th>
+          <th>Adres</th>
+          <th>Aciklama</th>
           <th>Düzenleme</th>
           <th>Silme</th>
         </tr>
@@ -29,25 +27,25 @@
           </td>
           <td v-if="updateId === product.id">
             <input
-              v-model="product.Kategori"
+              v-model="product.DepoAdi"
               type="text"
               class="form-control"
-              id="kategori"
+              id="depoAdi"
             />
           </td>
           <td v-else>
-            {{ product.Kategori }}
+            {{ product.DepoAdi }}
           </td>
           <td v-if="updateId === product.id">
             <input
-              v-model="product.ÜrünAdı"
+              v-model="product.Adres"
               type="text"
               class="form-control"
-              id="ürünAdı"
+              id="adres"
             />
           </td>
           <td v-else>
-            {{ product.ÜrünAdı }}
+            {{ product.Adres }}
           </td>
           <td v-if="updateId === product.id">
             <input
@@ -59,17 +57,6 @@
           </td>
           <td v-else>
             {{ product.Aciklama }}
-          </td>
-          <td v-if="updateId === product.id">
-            <input
-              v-model="product.Depo"
-              type="text"
-              class="form-control"
-              id="depo"
-            />
-          </td>
-          <td v-else>
-            {{ product.Depo }}
           </td>
           <td v-if="updateId !== product.id">
             <button class="btn btn-warning" @click="handleUpdate(product)">
@@ -95,42 +82,34 @@
   </div>
 </template>
 <script>
-import sidebar from "./sidebar.vue";
 export default {
   name: "depo",
-  components: {
-    sidebar,
-  },
   data() {
     return {
       products: [
         {
           id: 1,
-          Kategori: "Bilgisayar",
-          ÜrünAdı: "Lenova",
-          Aciklama: "Frontend",
-          Depo: "Istanbul",
+          DepoAdi: "İskenderun Depo",
+          Adres: "Denizciler",
+          Aciklama: "Depostok",
         },
         {
           id: 2,
-          Kategori: "Donanım",
-          ÜrünAdı: "Klavye",
-          Aciklama: "Backend",
-          Depo: "Istanbul",
+          DepoAdi: "İstanbul Depo",
+          Adres: "Caglayan",
+          Aciklama: "Depostok",
         },
         {
           id: 3,
-          Kategori: "Bilgisayar",
-          ÜrünAdı: "Macbook pro",
-          Aciklama: "İnsan Kaynakları",
-          Depo: "Istanbul",
+          DepoAdi: "Antalya Depo",
+          Adres: "Merkez",
+          Aciklama: "Personel",
         },
         {
           id: 4,
-          Kategori: "Donanım",
-          ÜrünAdı: "Anakart",
-          Aciklama: "Test",
-          Depo: "Istanbul",
+          DepoAdi: "Ankara Depo",
+          Adres: "Merkez",
+          Aciklama: "Depostok",
         },
       ],
       updateId: null,

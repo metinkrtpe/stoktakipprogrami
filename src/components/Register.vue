@@ -2,54 +2,55 @@
   <form @submit.prevent="handleSubmit">
     <error v-if="error" :error="error" />
     <h3>Kayıt Ol</h3>
+    <div class="kytDuzenle">
+      <div class="form-group">
+        <label>İsim</label>
+        <input
+          type="text"
+          class="form-control"
+          v-model="first_name"
+          placeholder="İsim"
+        />
+      </div>
+      <div class="form-group">
+        <label>Soy isim</label>
+        <input
+          type="text"
+          class="form-control"
+          v-model="last_name"
+          placeholder="Soy isim"
+        />
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input
+          type="email"
+          class="form-control"
+          v-model="email"
+          placeholder="Email"
+        />
+      </div>
+      <div class="form-group">
+        <label>Parola</label>
+        <input
+          type="password"
+          class="form-control"
+          v-model="password"
+          placeholder="Parola"
+        />
+      </div>
 
-    <div class="form-group">
-      <label>İsim</label>
-      <input
-        type="text"
-        class="form-control"
-        v-model="first_name"
-        placeholder="İsim"
-      />
+      <div class="form-group">
+        <label>Parolayı Tekrar Giriniz</label>
+        <input
+          type="password"
+          class="form-control"
+          v-model="password_confirm"
+          placeholder="Parolayı tekrar giriniz"
+        />
+      </div>
+      <button class="btn btn-primary btn-clock">Kayıt Ol</button>
     </div>
-    <div class="form-group">
-      <label>Soy isim</label>
-      <input
-        type="text"
-        class="form-control"
-        v-model="last_name"
-        placeholder="Soy isim"
-      />
-    </div>
-    <div class="form-group">
-      <label>Email</label>
-      <input
-        type="email"
-        class="form-control"
-        v-model="email"
-        placeholder="Email"
-      />
-    </div>
-    <div class="form-group">
-      <label>Parola</label>
-      <input
-        type="password"
-        class="form-control"
-        v-model="password"
-        placeholder="Parola"
-      />
-    </div>
-
-    <div class="form-group">
-      <label>Parolayı Tekrar Giriniz</label>
-      <input
-        type="password"
-        class="form-control"
-        v-model="password_confirm"
-        placeholder="Parolayı tekrar giriniz"
-      />
-    </div>
-    <button class="btn btn-primary btn-clock">Kayıt Ol</button>
   </form>
 </template>
 <script>
@@ -89,3 +90,10 @@ export default {
   },
 };
 </script>
+<style>
+.kytDuzenle {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>

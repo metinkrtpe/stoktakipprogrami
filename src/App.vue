@@ -33,7 +33,7 @@ export default {
   box-sizing: border-box;
 }
 body {
-  background: #1C8EF !important;
+  background: #f5f6fa !important;
   min-height: 100vh;
   display: flex;
   font-weight: 400;
@@ -70,10 +70,12 @@ html,
   flex-direction: column;
   text-align: left;
 }
+
 .auth-inner {
-  width: 450px;
-  margin: auto;
-  background: #ffffff;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
   padding: 40px 55px 45px 55px;
   border-radius: 15px;
   transition: all 0.3s;

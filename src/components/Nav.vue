@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand navbar-light fixed-top">
     <div class="container">
       <router-link to="/" class="navbar-brand"
-        >Anasayfa
+        >Stok Takip
 
         <div>{{ $route.name }}</div>
         {{ currentRouteName }}
@@ -12,8 +12,8 @@
           v-b-toggle.sidebar-1
           id="btnSidebar"
           style="background: #2d3436"
-          ><i class="fa fa-truck" aria-hidden="true"></i>Stok Takip</b-button
-        >
+          ><i class="fa fa-bars" aria-hidden="true"></i
+        ></b-button>
         <b-sidebar id="sidebar-1" bg-variant="dark" text-variant="light" shadow>
           <div class="px-3 py-2">
             <div class="wrapper">

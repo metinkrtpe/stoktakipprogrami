@@ -1,5 +1,6 @@
 <template>
   <div>
+    <DepoEkleme @add:product="addProduct" />
     <h6>Depo Bilgileri</h6>
     <table class="table table-striped table-hover">
       <thead class="thead-dark">
@@ -82,6 +83,7 @@
   </div>
 </template>
 <script>
+import DepoEkleme from "./depoEkleme.vue";
 export default {
   name: "depo",
   data() {
@@ -115,6 +117,9 @@ export default {
       updateId: null,
     };
   },
+  components: {
+    DepoEkleme,
+  },
   methods: {
     handleUpdate(product) {
       this.updateId = product.id;
@@ -129,7 +134,12 @@ export default {
       this.updateId = null;
     },
     updateProduct() {},
+    addProduct(product) {
+      const newProduct = { ...product };
+      this.products = [...this.products, newProduct];
+    },
   },
+
   mounted() {
     if (!localStorage.getItem("token")) {
       this.$router.push("/login");

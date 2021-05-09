@@ -1,12 +1,6 @@
 <template>
   <nav class="navbar navbar-expand navbar-light fixed-top">
     <div class="container">
-      <router-link to="/" class="navbar-brand"
-        >Stok Takip
-
-        <div>{{ $route.name }}</div>
-        {{ currentRouteName }}
-      </router-link>
       <div v-if="isLoggedIn()">
         <b-button
           v-b-toggle.sidebar-1
@@ -62,6 +56,12 @@
           </div>
         </b-sidebar>
       </div>
+      <router-link to="/" class="navbar-brand"
+        >Stok Takip
+
+        <div>{{ $route.name }}</div>
+        {{ currentRouteName }}
+      </router-link>
 
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto" v-if="!isLoggedIn()">
@@ -141,5 +141,8 @@ export default {
 .wrapper .sidebar__inner .siderbar_menu li a.active {
   background: #c23616;
   color: white;
+}
+#btnSidebar {
+  margin-right: 10px;
 }
 </style>

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <KategoriEkle @add:product="addProduct" />
     <h6>Kategori Bilgileri</h6>
     <table class="table table-striped table-hover">
       <thead class="thead-dark">
@@ -82,6 +83,8 @@
   </div>
 </template>
 <script>
+import KategoriEkle from "./kategoriEkle.vue";
+
 export default {
   name: "kategori",
   data() {
@@ -115,6 +118,9 @@ export default {
       updateId: null,
     };
   },
+  components: {
+    KategoriEkle,
+  },
   methods: {
     handleUpdate(product) {
       this.updateId = product.id;
@@ -129,7 +135,12 @@ export default {
       this.updateId = null;
     },
     updateProduct() {},
+    addProduct(product) {
+      const newProduct = { ...product };
+      this.products = [...this.products, newProduct];
+    },
   },
+
   mounted() {
     if (!localStorage.getItem("token")) {
       this.$router.push("/login");

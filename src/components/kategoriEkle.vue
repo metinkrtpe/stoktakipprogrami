@@ -43,16 +43,6 @@
               placeholder="Açıklama giriniz.."
             />
           </b-form-group>
-          <b-form-group>
-            <label for="Depo">DEPO ADI</label>
-            <b-form-input
-              v-model="product.DepoAdi"
-              type="text"
-              class="form-control"
-              id="DepoAdi"
-              placeholder="Depo adı giriniz.."
-            />
-          </b-form-group>
           <button type="submit" class="btn btn-primary" id="btnDuzenle">
             Ekle
           </button>
@@ -67,7 +57,7 @@ export default {
   name: "kategoriEkle",
   data() {
     return {
-      product: { id: "", Kategori: "", Aciklama: "", DepoAdi: "" },
+      product: { id: "", Kategori: "", Aciklama: "" },
     };
   },
   methods: {

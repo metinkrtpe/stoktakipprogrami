@@ -8,7 +8,6 @@
           <th>ID</th>
           <th>Kategori Adi</th>
           <th>Açıklama</th>
-          <th>Depo Adı</th>
           <th>Düzenleme</th>
           <th>Silme</th>
         </tr>
@@ -48,17 +47,6 @@
           <td v-else>
             {{ product.Aciklama }}
           </td>
-          <td v-if="updateId === product.id">
-            <input
-              v-model="product.DepoAdi"
-              type="text"
-              class="form-control"
-              id="depoAdi"
-            />
-          </td>
-          <td v-else>
-            {{ product.DepoAdi }}
-          </td>
           <td v-if="updateId !== product.id">
             <button class="btn btn-warning" @click="handleUpdate(product)">
               Güncelle
@@ -94,25 +82,21 @@ export default {
           id: 1,
           Kategori: "Bilgisayar",
           Aciklama: "Frontend",
-          DepoAdi: "Hatay",
         },
         {
           id: 2,
           Kategori: "Donanim",
           Aciklama: "Backend",
-          DepoAdi: "Ankara",
         },
         {
           id: 3,
           Kategori: "Bilgisayar",
           Aciklama: "İnsan Kaynakları",
-          DepoAdi: "Istanbul",
         },
         {
           id: 4,
           Kategori: "Donanim",
           Aciklama: "Test",
-          DepoAdi: "Antalya",
         },
       ],
       updateId: null,

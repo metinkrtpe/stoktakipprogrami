@@ -1,5 +1,5 @@
 <template>
-  <div id="addForm">
+  <div>
     <b-button v-b-modal.modal-prevent-closing style="background: #2d3436"
       ><i class="fa fa-plus" aria-hidden="true"></i
     ></b-button>
@@ -20,37 +20,37 @@
             type="text"
             class="form-control"
             id="id"
-            placeholder="id"
+            placeholder="ID değeri giriniz.."
           />
         </b-form-group>
         <b-form-group>
-          <label for="DepoAdi">Depo Adi</label>
+          <label for="DepoAdi">DEPO ADI</label>
           <b-form-input
             v-model="product.DepoAdi"
             type="text"
             class="form-control"
             id="DepoAdi"
-            placeholder="Depo Adi"
+            placeholder="Depo adı giriniz.."
           />
         </b-form-group>
         <b-form-group>
-          <label for="Adres">Adres</label>
+          <label for="Adres">ADRES</label>
           <b-form-input
             v-model="product.Adres"
             type="text"
             class="form-control"
             id="Adres"
-            placeholder="Adres"
+            placeholder="Adres giriniz.."
           />
         </b-form-group>
         <b-form-group>
-          <label for="Aciklama">Açıklama</label>
+          <label for="Aciklama">AÇIKLAMA</label>
           <b-form-input
             v-model="product.Aciklama"
             type="text"
             class="form-control"
             id="Aciklama"
-            placeholder="Aciklama"
+            placeholder="Açıklama giriniz.."
           />
         </b-form-group>
         <button type="submit" class="btn btn-primary" id="btnDuzenle">
@@ -75,4 +75,8 @@ export default {
   },
 };
 </script>
-<style scoped></style>
+<style scoped>
+#btnDuzenle {
+  width: 100%;
+}
+</style>

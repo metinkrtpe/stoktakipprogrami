@@ -20,37 +20,37 @@
               type="text"
               class="form-control"
               id="id"
-              placeholder="ID"
+              placeholder="ID değeri giriniz.."
             />
           </b-form-group>
           <b-form-group>
-            <label for="Kategori">Kategori</label>
+            <label for="Kategori">KATEGORİ</label>
             <b-form-input
               v-model="product.Kategori"
               type="text"
               class="form-control"
               id="Kategori"
-              placeholder="Kategori"
+              placeholder="Kategori adı giriniz.."
             />
           </b-form-group>
           <b-form-group>
-            <label for="Aciklama">Açıklama</label>
+            <label for="Aciklama">AÇIKLAMA</label>
             <b-form-input
               v-model="product.Aciklama"
               type="text"
               class="form-control"
               id="Aciklama"
-              placeholder="Aciklama"
+              placeholder="Açıklama giriniz.."
             />
           </b-form-group>
           <b-form-group>
-            <label for="Depo">Depo Adi</label>
+            <label for="Depo">DEPO ADI</label>
             <b-form-input
               v-model="product.DepoAdi"
               type="text"
               class="form-control"
               id="DepoAdi"
-              placeholder="Depo"
+              placeholder="Depo adı giriniz.."
             />
           </b-form-group>
           <button type="submit" class="btn btn-primary" id="btnDuzenle">
@@ -77,4 +77,8 @@ export default {
   },
 };
 </script>
-<style scoped></style>
+<style scoped>
+#btnDuzenle {
+  width: 100%;
+}
+</style>

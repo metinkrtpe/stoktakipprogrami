@@ -2,6 +2,7 @@
   <div>
     <DepoEkleme @add:product="addProduct" />
     <h6>Depo Bilgileri</h6>
+
     <table class="table table-striped table-hover">
       <thead class="thead-dark">
         <tr>
